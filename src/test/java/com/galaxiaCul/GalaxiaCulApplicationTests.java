@@ -1,4 +1,4 @@
-package com.galaxiaCul.galaxiaCul;
+package com.galaxiaCul;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
