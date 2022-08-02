@@ -1,4 +1,4 @@
-API Galaxia Cul
+API Galaxia Cul - Java 
 
 Saludos! :D
 
