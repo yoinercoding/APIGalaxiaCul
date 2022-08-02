@@ -1,6 +1,6 @@
-package com.galaxiaCul.galaxiaCul.controller;
+package com.galaxiaCul.controller;
 
-import com.galaxiaCul.galaxiaCul.repository.pronosticoRepository;
+import com.galaxiaCul.model.Pronostico;
 import com.galaxiaCul.galaxiaCul.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
