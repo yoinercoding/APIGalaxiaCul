@@ -1,5 +1,5 @@
 API Galaxia Cul
 
-[https://www.linkedin.com/in/yoinerbello/](Yoiner Rafael Bello Fajardo)
+(Yoiner Rafael Bello Fajardo)[https://www.linkedin.com/in/yoinerbello/]
 
 Saludos! :D
