@@ -1,14 +1,13 @@
-package com.galaxiaCul.galaxiaCul.repository;
+package com.galaxiaCul.repository;
 
 import java.util.List;
 
-import com.galaxiaCul.galaxiaCul.model.Pronostico;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.galaxiaCul.model.Pronostico;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository("pronosticoRepository")
-public interface pronosticoRepository extends PagingAndSortingRepository<Pronostico, Long> {
+public interface PronosticoRepository extends PagingAndSortingRepository<Pronostico, Long> {
 
     // @param dia
     // @return DEVUELVE EL PRONOSTICO DE UN DIA
