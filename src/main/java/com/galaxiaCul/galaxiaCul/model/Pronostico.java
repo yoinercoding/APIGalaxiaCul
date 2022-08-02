@@ -1,7 +1,6 @@
 package com.galaxiaCul.galaxiaCul.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import javax.persistence.*;
 
 @Entity
