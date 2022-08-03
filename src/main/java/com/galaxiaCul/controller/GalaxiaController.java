@@ -1,14 +1,18 @@
 package com.galaxiaCul.controller;
 
-import com.galaxiaCul.model.Pronostico;
-import com.galaxiaCul.galaxiaCul.model.*;
+import java.util.List;
+import java.util.ArrayList;
+
+import com.galaxiaCul.repository.PronosticoRepository;
+
+import com.galaxiaCul.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class galaxiaController {
+public class GalaxiaController {
 
     @Autowired
     private PronosticoRepository pronosticoRepository;
@@ -31,7 +35,7 @@ public class galaxiaController {
 
     // @param tipo, años
     // @return EL PERIODO Y LA CANTIDAD DE DIAS QUE SE REPETIRA EN LA CANTIDAD DE AÑOS INGRESADOS
-    @RequestMapping("periodo")
+    @RequestMapping("/periodo")
     public Periodo periodo(@RequestParam(value="tipo") String tipo, @RequestParam(value="años") String anios) {
         try {
             List<Pronostico> List = pronosticoRepository.findByCLima(tipo);
