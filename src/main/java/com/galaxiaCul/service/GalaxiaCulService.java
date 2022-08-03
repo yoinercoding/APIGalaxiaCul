@@ -4,7 +4,7 @@ import java.util.List;
 import com.galaxiaCul.model.Pronostico;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.galaxiaCul.galaxiaCul.model.*;
+import com.galaxiaCul.model.*;
 import com.galaxiaCul.repository.PronosticoRepository;
 
 @Service("galaxiaCulService")

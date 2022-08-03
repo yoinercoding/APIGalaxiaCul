@@ -2,6 +2,7 @@ package com.galaxiaCul.repository;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import com.galaxiaCul.model.Pronostico;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
@@ -15,6 +16,7 @@ public interface PronosticoRepository extends PagingAndSortingRepository<Pronost
 
     // @param clima
     // @return DEVUELVE UNA LISTA CON TODOS LOS PRONOSTICOS DEL CLIMA INGRESADO
+
     public List<Pronostico> findByClima(String clima);
 
     // @return DEVUELVE EL PRONOSTICO QUE TENGA MAYOR PERIMETRO
@@ -23,7 +25,7 @@ public interface PronosticoRepository extends PagingAndSortingRepository<Pronost
     // @param dia
     // @param clima
     // return DEVUELVE UNA LISTA CON LOS PRONOSTICOS DE ESE CLIMA EN LA QUE EL DIA SEA MENOR AL INGRESADO
-    public List<Pronostico> findByDiaLessThanAndclima(int dia, String clima);
+    public List<Pronostico> findByDiaLessThanAndClima(int dia, String clima);
 
     // @param perimetro
     // @return DEVUELVE UNA LISTA CON LAS PREDICCIONES QUE TIENE EXACTAMENTE EL MISMO PERIMETRO

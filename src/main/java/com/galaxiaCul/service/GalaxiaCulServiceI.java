@@ -1,6 +1,6 @@
 package com.galaxiaCul.service;
 
-import com.galaxiaCul.galaxiaCul.model.*;
+import com.galaxiaCul.model.*;
 import com.galaxiaCul.repository.PronosticoRepository;
 
 public interface GalaxiaCulServiceI {

@@ -30,7 +30,7 @@ public class GalaxiaCulApplication {
 			Planeta vulcano = new Planeta("Vulcano", 1000, 5, sentidoAntihorario);
 
 			GalaxiaCulService galaxiaService = new GalaxiaCulService();
-			galaxiaCulService.init(ferengi, betasoide, vulcano, pronosticoRepository);
+			galaxiaService.init(ferengi, betasoide, vulcano, pronosticoRepository);
 
 			logger.info("Los datos fueros cargados correctamente");
 		};
