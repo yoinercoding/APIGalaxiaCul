@@ -18,8 +18,6 @@ public class Pronostico {
     private int dia;
     private double perimetro;
 
-    public Pronostico() {}
-
     public Pronostico(int dia, String clima, double perimetro) {
         super();
         this.dia = dia;

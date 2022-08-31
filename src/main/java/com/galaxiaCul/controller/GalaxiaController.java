@@ -2,9 +2,10 @@ package com.galaxiaCul.controller;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import com.galaxiaCul.repository.PronosticoRepository;
-
+import org.springframework.web.bind.annotation.PathVariable;
 import com.galaxiaCul.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,7 +39,7 @@ public class GalaxiaController {
     @RequestMapping("/periodo")
     public Periodo periodo(@RequestParam(value="tipo") String tipo, @RequestParam(value="años") String anios) {
         try {
-            List<Pronostico> List = pronosticoRepository.findByCLima(tipo);
+            List <Pronostico> List = PronosticoRepository.findByCLima(tipo);
             int cantidadPorAnio = list.size();
             int cantidadTotal = cantidadPorAnio * Integer.valueOf(anios).intValue();
             Periodo periodo = new Periodo(cantidadTotal, tipo);
