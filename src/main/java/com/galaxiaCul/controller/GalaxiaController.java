@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import com.galaxiaCul.repository.PronosticoRepository;
+import com.galaxiaCul.model.Periodo;
+import com.galaxiaCul.model.Pronostico;
+
 import org.springframework.web.bind.annotation.PathVariable;
 import com.galaxiaCul.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,20 +35,22 @@ public class GalaxiaController {
             throw new RuntimeException("Los parametros ingresados son incorrectos.");
         }
     }
-
-
-    // @param tipo, años
-    // @return EL PERIODO Y LA CANTIDAD DE DIAS QUE SE REPETIRA EN LA CANTIDAD DE AÑOS INGRESADOS
+    
+    /* @param tipo, años
+    *  @return el periodo y la cantidad de dias que se repetirá en la cantidad de años ingresados.
+    */
     @RequestMapping("/periodo")
     public Periodo periodo(@RequestParam(value="tipo") String tipo, @RequestParam(value="años") String anios) {
-        try {
-            List <Pronostico> List = PronosticoRepository.findByCLima(tipo);
-            int cantidadPorAnio = list.size();
-            int cantidadTotal = cantidadPorAnio * Integer.valueOf(anios).intValue();
-            Periodo periodo = new Periodo(cantidadTotal, tipo);
+        try{
 
+      	  List<Pronostico> list = pronosticoRepository.findByClima(tipo);
+      	  int cantidadPorAnio = list.size();
+      	  int cantidadTotal = cantidadPorAnio * Integer.valueOf(anios).intValue();
+      	  Periodo periodo = new Periodo(cantidadTotal, tipo);
+      	  
             return periodo;
-        } catch (Exception e) {
+            
+        }catch (Exception e){
             throw new RuntimeException("Los parametros ingresados son incorrectos.");
         }
     }

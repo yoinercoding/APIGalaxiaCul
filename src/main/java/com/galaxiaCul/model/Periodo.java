@@ -1,6 +1,12 @@
 package com.galaxiaCul.model;
 
 import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
 public class Periodo {
 
     private String clima;

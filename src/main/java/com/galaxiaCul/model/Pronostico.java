@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 @Entity
 @DiscriminatorValue("pronostico")
 @JsonIgnoreProperties("perimetro")
@@ -17,6 +18,9 @@ public class Pronostico {
     private String clima;
     private int dia;
     private double perimetro;
+    
+    private Pronostico () {
+    }
 
     public Pronostico(int dia, String clima, double perimetro) {
         super();
@@ -51,6 +55,6 @@ public class Pronostico {
 
     @Override
     public String toString() {
-        return "Pronostico [clima=" + clima +", dia=" + dia + "]";
+        return "Pronostico [clima=" + clima + ", dia=" + dia + "]";
     }
 }
